@@ -9,10 +9,9 @@
 <body>
 
     <header>
-        <div class="logo">EcoAgro<span>Sustentável</span></div>
+        <div class="logo">AgroSustentável</div>
         <nav>
             <a href="#inicio">Início</a>
-            <a href="#pilares">Pilares</a>
             <a href="#simulador">Simulador</a>
         </nav>
     </header>
@@ -20,55 +19,39 @@
     <section id="inicio" class="hero">
         <div class="hero-content">
             <h1>Agro Forte, Futuro Sustentável</h1>
-            <p>O equilíbrio perfeito entre a alta produtividade no campo e a preservação do meio ambiente.</p>
+            <p>O equilíbrio perfeito entre a alta produção de alimentos e a preservação do nosso meio ambiente.</p>
             <a href="#simulador" class="btn">Testar Simulador</a>
         </div>
     </section>
 
-    <section id="pilares" class="pilares-section">
-        <h2>Práticas para o Futuro</h2>
-        <div class="cards-container">
-            <div class="card">
-                <h3>🚜 Tecnologia Precision</h3>
-                <p>Uso de drones e sensores para aplicar água e insumos apenas onde é necessário, evitando desperdícios.</p>
-            </div>
-            <div class="card">
-                <h3>🌱 Rotação de Culturas</h3>
-                <p>Alternar as espécies plantadas para manter o solo fértil e reduzir pragas naturalmente.</p>
-            </div>
-            <div class="card">
-                <h3>💧 Manejo de Água</h3>
-                <p>Sistemas de irrigação gota a gota e captação da água da chuva para preservar recursos hídricos.</p>
-            </div>
-        </div>
-    </section>
+    <section id="simulador" class="simulador-container">
+        <h2>Simulador de Fazenda Sustentável</h2>
+        <p>Escolha as práticas agrícolas abaixo e veja o impacto no futuro do planeta:</p>
 
-    <section id="simulador" class="simulador-section">
-        <h2>Simulador de Equilíbrio Agrícola</h2>
-        <p>Escolha as práticas para a sua fazenda e veja o impacto no futuro:</p>
-        
-        <div class="form-simulador">
-            <label for="energia">Fonte de Energia:</label>
-            <select id="energia">
-                <option value="poluente">Combustíveis Fósseis (Diesel)</option>
-                <option value="limpa">Energia Solar / Biomassa</option>
-            </select>
-
-            <label for="defensivos">Controle de Pragas:</label>
-            <select id="defensivos">
-                <option value="quimico">Uso massivo de químicos</option>
-                <option value="biologico">Manejo Integrado / Biológicos</option>
-            </select>
-
-            <button onclick="calcularImpacto()">Analisar Resultado</button>
+        <div class="opcoes">
+            <label>
+                <input type="checkbox" id="reuso-agua" onchange="atualizarSimulador()"> 
+                Uso de Cisternas e Reuso de Água (+30% Sustentabilidade)
+            </label>
+            <label>
+                <input type="checkbox" id="energia-solar" onchange="atualizarSimulador()"> 
+                Uso de Energia Solar na Propriedade (+40% Sustentabilidade)
+            </label>
+            <label>
+                <input type="checkbox" id="plantio-direto" onchange="atualizarSimulador()"> 
+                Plantio Direto e Rotação de Culturas (+30% Sustentabilidade)
+            </label>
         </div>
 
-        <div id="resultado" class="resultado-box">
-            </div>
+        <div class="progresso-bar">
+            <div id="barra" class="barra-preenchimento">0%</div>
+        </div>
+
+        <p id="mensagem" class="mensagem-resultado">Sua fazenda ainda precisa adotar práticas sustentáveis!</p>
     </section>
 
     <footer>
-        <p>Projeto desenvolvido para o Concurso Agrinho 2026</p>
+        <p>&copy; 2026 - Concurso Agrinho. Desenvolvido com 💚 para um futuro melhor.</p>
     </footer>
 
     <script src="script.js"></script>
