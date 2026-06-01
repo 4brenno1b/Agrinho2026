@@ -4,78 +4,70 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    scroll-behavior: smooth;
 }
 
 body {
     background-color: #f4f7f5;
     color: #333;
+    scroll-behavior: smooth;
 }
 
 /* Cabeçalho */
 header {
-    background-color: #1b4332;
+    background-color: #2e7d32; /* Verde Agro */
     color: white;
     padding: 20px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
-    width: 100%;
+    position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-.logo {
+header .logo {
     font-size: 24px;
     font-weight: bold;
 }
 
-.logo span {
-    color: #52b788;
-}
-
-nav a {
+header nav a {
     color: white;
     text-decoration: none;
     margin-left: 20px;
     font-weight: 500;
-    transition: 0.3s;
 }
 
-nav a:hover {
-    color: #52b788;
+header nav a:hover {
+    text-decoration: underline;
 }
 
-/* Seção Hero (Início) */
+/* Seção Hero */
 .hero {
-    height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+    height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: white;
-    padding: 0 20px;
+    padding: 20px;
 }
 
 .hero-content h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
+    font-size: 42px;
+    margin-bottom: 15px;
 }
 
 .hero-content p {
-    font-size: 20px;
-    margin-bottom: 30px;
+    font-size: 18px;
+    margin-bottom: 25px;
     max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .btn {
-    background-color: #52b788;
-    color: white;
-    padding: 12px 30px;
+    background-color: #81c784;
+    color: #1b5e20;
+    padding: 12px 25px;
     text-decoration: none;
     font-weight: bold;
     border-radius: 25px;
@@ -83,23 +75,76 @@ nav a:hover {
 }
 
 .btn:hover {
-    background-color: #40916c;
+    background-color: white;
+    color: #2e7d32;
 }
 
-/* Seção Pilares */
-.pilares-section, .simulador-section {
-    padding: 100px 50px 60px 50px;
+/* Seção do Simulador */
+.simulador-container {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     text-align: center;
 }
 
-.pilares-section h2, .simulador-section h2 {
-    font-size: 36px;
-    color: #1b4332;
-    margin-bottom: 40px;
+.simulador-container h2 {
+    color: #2e7d32;
+    margin-bottom: 15px;
 }
 
-.cards-container {
+.opcoes {
     display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 500px;
+    margin: 30px auto;
+}
+
+.opcoes label {
+    margin: 10px 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.opcoes input {
+    margin-right: 10px;
+    scale: 1.2;
+}
+
+/* Barra de Progresso */
+.progresso-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.barra-preenchimento {
+    width: 0%;
+    height: 30px;
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+    transition: width 0.5s ease;
+}
+
+.mensagem-resultado {
+    font-weight: bold;
+    margin-top: 15px;
+    color: #555;
+}
+
+/* Rodapé */
+footer {
+    background-color: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
